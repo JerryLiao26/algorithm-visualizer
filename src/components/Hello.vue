@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="container">
     <h1>Hello!</h1>
     <button class="md-button" @click="start()">
       开始
@@ -26,7 +26,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  margin-top: 15%;
-}
+
 </style>

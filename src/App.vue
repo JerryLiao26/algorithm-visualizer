@@ -20,6 +20,18 @@ export default {
   margin-top: 60px;
 }
 
+.container {
+  width: 80%;
+  min-width: 320px;
+  max-width: 800px;
+
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+}
+
 .md-button {
   height: 40px;
 
@@ -35,5 +47,78 @@ export default {
   color: white;
 
   border-style: none;
+
+  cursor: pointer;
 }
+
+.md-select {
+  width: 71%;
+  height: 30px;
+
+  display: block;
+
+  font-size: 1.1em;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1.5px;
+  border-bottom-color: rgba(0,0,0,.12);
+
+  background-color: transparent;
+
+  outline: none;
+
+  transition: border-bottom-color 0.5s;
+}
+
+.md-select:focus {
+  border-bottom-color: #3f51b5;
+}
+
+.md-select > option {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.md-input {
+  width: 70%;
+
+  display: block;
+
+  font-size: 1.1em;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1.5px;
+  border-bottom-color: rgba(0,0,0,.12);
+
+  outline: none;
+
+  transition: border-bottom-color 0.5s;
+}
+
+.md-input:focus {
+  border-bottom-color: #3f51b5;
+}
+
 </style>
