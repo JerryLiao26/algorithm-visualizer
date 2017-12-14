@@ -2,19 +2,25 @@
   <div class="container">
     <h1>配置数据</h1>
     <select class="md-select" v-model="type">
-      <option value="" disabled>请选择数据类型</option>
+      <option value="" disabled>请选择算法</option>
       <optgroup label="数">
-        <option value="array">数组</option>
+        <option value="sort">排序</option>
       </optgroup>
       <optgroup label="图">
-        <option value="unoriented">无向图</option>
-        <option value="oriented">有向图</option>
+        <option value="max_flow">最大流</option>
       </optgroup>
     </select>
-    <input class="md-input" type="text" v-model="source" placeholder="数据源路径">
-    <button class="md-button" @click="next()">
-      下一步
-    </button>
+    <div class="row">
+      <button class="md-button" @click="trigger()">
+        {{ source_hint }}
+      </button>
+      <input type="file" id="file" v-on:change="read()">
+    </div>
+    <div class="row">
+      <button class="md-button" @click="next()">
+        下一步
+      </button>
+    </div>
   </div>
 </template>
 
@@ -24,10 +30,24 @@ export default {
   data() {
     return {
       type: '',
-      source: ''
+      source: '',
+      source_hint: '选择数据源'
     }
   },
   methods: {
+    read() {
+      let that = this
+      let reader = new FileReader()
+      let file = document.getElementById('file').files[0]
+      reader.readAsText(file)
+      reader.onload = function(f) {
+        that.source = this.result
+        that.source_hint = '数据读取完成'
+      }
+    },
+    trigger() {
+      document.getElementById('file').click()
+    },
     next() {
       localStorage.setItem('av_type', this.type)
       localStorage.setItem('av_source', this.source)
@@ -38,5 +58,7 @@ export default {
 </script>
 
 <style>
-
+#file {
+  display: none;
+}
 </style>
