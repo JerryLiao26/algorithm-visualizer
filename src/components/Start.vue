@@ -4,10 +4,10 @@
     <select class="md-select" v-model="type">
       <option value="" disabled>请选择算法</option>
       <optgroup label="数">
-        <option value="sort">排序</option>
+        <option value="Sort">排序</option>
       </optgroup>
       <optgroup label="图">
-        <option value="max_flow">最大流</option>
+        <option value="MaxFlow">最大流</option>
       </optgroup>
     </select>
     <div class="row">
@@ -49,9 +49,8 @@ export default {
       document.getElementById('file').click()
     },
     next() {
-      localStorage.setItem('av_type', this.type)
       localStorage.setItem('av_source', this.source)
-      router.push({name: 'Show'})
+      router.push({name: this.type})
     }
   }
 }
