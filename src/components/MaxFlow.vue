@@ -18,6 +18,9 @@
     <button class="md-button" @click="last_step()">上一步</button>
     <span>当前第{{ cur }}步，共有{{ steps.length }}步</span>
     <button class="md-button" @click="next_step()">下一步</button>
+    <div class="row">
+      <button class="md-button" @click="back()">返回</button>
+    </div>
   </div>
 </template>
 
@@ -83,6 +86,9 @@ export default {
     this.paint()
   },
   methods: {
+    back() {
+      router.push({name: 'Start'})
+    },
     last_step() {
       if (this.cur > 0) {
         this.cur -= 1
