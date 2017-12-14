@@ -28,6 +28,8 @@ export default {
   margin-left: auto;
   margin-right: auto;
 
+  padding-bottom: 75px;
+
   overflow: hidden;
 }
 
