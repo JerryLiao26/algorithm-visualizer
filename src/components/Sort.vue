@@ -83,22 +83,6 @@ export default {
       for (let each_line of lines.slice(1)) {
         this.steps.push(each_line.split(' '))
       }
-    },
-    get_xy(id) {
-      let item = document.getElementById(id)
-      let obj = {
-        x: item.offsetLeft,
-        y: item.offsetTop
-      }
-      return obj
-    },
-    get_hw(id) {
-      let item = document.getElementById(id)
-      let obj = {
-        w: item.clientWidth,
-        h: item.clientHeight
-      }
-      return obj
     }
   }
 }
