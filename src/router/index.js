@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Start from '@/components/Start'
 import Sort from '@/components/Sort'
 import MaxFlow from '@/components/MaxFlow'
+import NearestPair from '@/components/NearestPair'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/max_flow',
       name: 'MaxFlow',
       component: MaxFlow
+    },
+    {
+      path: '/nearest_pair',
+      name: 'NearestPair',
+      component: NearestPair
     }
   ]
 })

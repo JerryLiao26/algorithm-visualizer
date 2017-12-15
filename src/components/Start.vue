@@ -7,6 +7,7 @@
         <option value="Sort">排序</option>
       </optgroup>
       <optgroup label="图">
+        <option value="NearestPair">最近点对</option>
         <option value="MaxFlow">最大流</option>
       </optgroup>
     </select>
