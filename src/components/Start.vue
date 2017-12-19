@@ -9,6 +9,7 @@
       <optgroup label="图">
         <option value="NearestPair">最近点对</option>
         <option value="MaxFlow">最大流</option>
+        <option value="Queen">皇后问题</option>
       </optgroup>
     </select>
     <div class="row">

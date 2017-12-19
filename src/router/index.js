@@ -5,6 +5,7 @@ import Start from '@/components/Start'
 import Sort from '@/components/Sort'
 import MaxFlow from '@/components/MaxFlow'
 import NearestPair from '@/components/NearestPair'
+import Queen from '@/components/Queen'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/nearest_pair',
       name: 'NearestPair',
       component: NearestPair
+    },
+    {
+      path: '/queen',
+      name: 'Queen',
+      component: Queen
     }
   ]
 })
