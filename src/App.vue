@@ -33,6 +33,10 @@ export default {
   overflow: hidden;
 }
 
+.row {
+  width: 100%;
+}
+
 .md-button {
   height: 40px;
 

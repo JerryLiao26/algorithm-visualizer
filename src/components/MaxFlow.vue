@@ -15,9 +15,11 @@
       {{ item }}
     </p>
     <h3>当前最大流：{{ max }}</h3>
-    <button class="md-button" @click="last_step()">上一步</button>
-    <span>当前第{{ cur }}步，共有{{ steps.length }}步</span>
-    <button class="md-button" @click="next_step()">下一步</button>
+    <div class="row">
+      <button class="md-button" @click="last_step()">上一步</button>
+      <span>当前第{{ cur }}步，共有{{ steps.length }}步</span>
+      <button class="md-button" @click="next_step()">下一步</button>
+    </div>
     <div class="row">
       <button class="md-button" @click="back()">返回</button>
     </div>
@@ -94,7 +96,7 @@ export default {
         this.cur -= 1
       }
       else {
-        this.cur == 0
+        this.cur = 0
       }
       this.flow()
     },
@@ -104,7 +106,7 @@ export default {
         this.cur += 1
       }
       else {
-        this.cur == len
+        this.cur = len
       }
       this.flow()
     },
@@ -275,10 +277,6 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  width: 100%;
-}
-
 .canvas {
   display: none;
 }

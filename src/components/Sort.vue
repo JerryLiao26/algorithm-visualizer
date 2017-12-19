@@ -5,9 +5,11 @@
         {{ item.index+1 }}:{{ item.val }}
       </div>
     </div>
-    <button class="md-button" @click="last_step()">上一步</button>
-    <span>当前第{{ cur }}步，共有{{ steps.length }}步</span>
-    <button class="md-button" @click="next_step()">下一步</button>
+    <div class="row">
+      <button class="md-button" @click="last_step()">上一步</button>
+      <span>当前第{{ cur }}步，共有{{ steps.length }}步</span>
+      <button class="md-button" @click="next_step()">下一步</button>
+    </div>
     <div class="row">
       <button class="md-button" @click="back()">返回</button>
     </div>
